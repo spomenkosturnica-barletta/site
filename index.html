@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spomenik di Barletta</title>
+  <meta name="description" content="Sito informativo sullo Spomenik di Barletta, l'Ossario commemorativo dei caduti jugoslavi progettato da Dušan Džamonja e inaugurato nel 1970.">
+  <meta property="og:title" content="Spomenik di Barletta">
+  <meta property="og:description" content="Memoria, architettura e contesto dello Spomenik di Barletta.">
+  <meta property="og:type" content="website">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.2rem, 1.4rem + 3vw, 4.4rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+      --color-bg: #f4f1ec;
+      --color-surface: #f8f5ef;
+      --color-surface-2: #fcfaf6;
+      --color-surface-offset: #eae4dc;
+      --color-border: #d5cfc6;
+      --color-divider: #d8d2ca;
+      --color-text: #241f1a;
+      --color-text-muted: #69635d;
+      --color-text-faint: #99928a;
+      --color-text-inverse: #f8f5ef;
+      --color-primary: #5d3a22;
+      --color-primary-hover: #432716;
+      --color-accent: #7a5d2f;
+      --shadow-sm: 0 1px 2px rgba(26, 21, 16, 0.08);
+      --shadow-md: 0 10px 30px rgba(26, 21, 16, 0.10);
+      --radius-sm: 0.375rem; --radius-md: 0.75rem; --radius-lg: 1rem; --radius-xl: 1.5rem; --radius-full: 999px;
+      --content-narrow: 720px; --content-default: 1120px;
+      --font-body: 'Satoshi', system-ui, sans-serif;
+      --font-display: 'Boska', Georgia, serif;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #171411;
+      --color-surface: #1e1a17;
+      --color-surface-2: #25211d;
+      --color-surface-offset: #2e2823;
+      --color-border: #3d362f;
+      --color-divider: #342d27;
+      --color-text: #e7e0d8;
+      --color-text-muted: #b9afa4;
+      --color-text-faint: #8f857a;
+      --color-text-inverse: #16120f;
+      --color-primary: #d0b07d;
+      --color-primary-hover: #e1c290;
+      --color-accent: #9fc0b3;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
+      --shadow-md: 0 16px 40px rgba(0,0,0,0.35);
+    }
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:5rem}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:var(--color-bg);color:var(--color-text)}
+    img,svg{display:block;max-width:100%;height:auto}
+    a,button{transition:all var(--transition-interactive)}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;border:none;background:none;cursor:pointer}
+    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:-9999px;top:auto}.skip-link:focus{left:1rem;top:1rem;background:var(--color-surface-2);padding:.75rem 1rem;z-index:1000;border-radius:var(--radius-md)}
+    .container{width:min(calc(100% - 2rem), var(--content-default));margin-inline:auto}
+    .narrow{width:min(calc(100% - 2rem), var(--content-narrow));margin-inline:auto}
+    header{position:sticky;top:0;z-index:20;background:color-mix(in oklab, var(--color-bg) 84%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in oklab, var(--color-border) 80%, transparent)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) 0;gap:var(--space-4)}
+    .brand{display:flex;align-items:center;gap:var(--space-3)}
+    .brand svg{width:42px;height:42px;color:var(--color-primary)}
+    .brand-text{display:flex;flex-direction:column}
+    .brand-text strong{font-size:var(--text-sm);letter-spacing:.08em;text-transform:uppercase}
+    .brand-text span{font-size:var(--text-xs);color:var(--color-text-muted)}
+    nav{display:flex;gap:var(--space-4);flex-wrap:wrap;align-items:center}
+    nav a{font-size:var(--text-sm);color:var(--color-text-muted)}
+    nav a:hover{color:var(--color-primary)}
+    .theme-toggle{min-width:44px;min-height:44px;border:1px solid var(--color-border);border-radius:var(--radius-full);display:grid;place-items:center;background:var(--color-surface)}
+    main section{padding:clamp(var(--space-12), 8vw, var(--space-24)) 0}
+    .hero{padding-top:var(--space-16)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-8);align-items:end}
+    .eyebrow{font-size:var(--text-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-4)}
+    h1,h2{font-family:var(--font-display);line-height:1.05;font-weight:500}
+    h1{font-size:var(--text-2xl);max-width:11ch}
+    h2{font-size:var(--text-xl);margin-bottom:var(--space-5)}
+    h3{font-size:var(--text-lg);line-height:1.2;margin-bottom:var(--space-3)}
+    p{max-width:68ch;color:var(--color-text)}
+    .lead{font-size:var(--text-lg);color:var(--color-text-muted);max-width:34ch;margin-top:var(--space-5)}
+    .hero-card,.card,.quote,.timeline-item,.stat,.gallery-card{background:var(--color-surface);border:1px solid color-mix(in oklab, var(--color-border) 75%, transparent);border-radius:var(--radius-xl);box-shadow:var(--shadow-sm)}
+    .hero-card{padding:var(--space-6);display:grid;gap:var(--space-5);position:relative;overflow:hidden;min-height:28rem}
+    .hero-card:before{content:"";position:absolute;inset:auto -10% -20% 35%;height:16rem;background:radial-gradient(circle at center, color-mix(in oklab, var(--color-primary) 28%, transparent), transparent 68%);pointer-events:none}
+    .monument-mark{display:grid;place-items:center;min-height:14rem;border-radius:calc(var(--radius-xl) - var(--space-2));background:linear-gradient(180deg, color-mix(in oklab, var(--color-surface-2) 82%, var(--color-primary) 18%), var(--color-surface-offset));border:1px solid color-mix(in oklab, var(--color-border) 70%, transparent)}
+    .monument-mark svg{width:min(100%, 22rem);height:auto;color:var(--color-primary)}
+    .meta-list{display:grid;gap:var(--space-3)}
+    .meta-row{display:flex;justify-content:space-between;gap:var(--space-4);padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider)}
+    .meta-row span:first-child{color:var(--color-text-muted)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-top:var(--space-8)}
+    .stat{padding:var(--space-5)}
+    .stat strong{display:block;font-size:var(--text-xl);font-family:var(--font-display);margin-bottom:var(--space-2)}
+    .two-col{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:var(--space-8);align-items:start}
+    .sidebar-note,.quote{padding:var(--space-6)}
+    .sidebar-note{background:var(--color-surface-offset);border-radius:var(--radius-lg);border:1px solid color-mix(in oklab, var(--color-border) 75%, transparent)}
+    .quote{font-family:var(--font-display);font-size:var(--text-lg);line-height:1.3}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4)}
+    .card,.gallery-card,.timeline-item{padding:var(--space-5)}
+    .card p,.timeline-item p,.gallery-card p{color:var(--color-text-muted)}
+    .timeline{display:grid;gap:var(--space-4)}
+    .timeline-item{display:grid;grid-template-columns:120px 1fr;gap:var(--space-4);align-items:start}
+    .timeline-year{font-size:var(--text-sm);letter-spacing:.08em;text-transform:uppercase;color:var(--color-primary)}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--space-4)}
+    .gallery-card.tall{min-height:22rem}
+    .gallery-card.small{min-height:10.5rem}
+    .gallery-stack{display:grid;gap:var(--space-4)}
+    .diagram{margin-top:var(--space-4);padding:var(--space-4);border-radius:var(--radius-lg);background:linear-gradient(180deg, color-mix(in oklab, var(--color-surface-2) 88%, transparent), var(--color-surface-offset));border:1px solid color-mix(in oklab, var(--color-border) 70%, transparent)}
+    .diagram svg{width:100%;height:auto;color:var(--color-primary)}
+    .pill{display:inline-flex;align-items:center;padding:.5rem .85rem;border-radius:var(--radius-full);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;background:color-mix(in oklab, var(--color-primary) 10%, var(--color-surface));color:var(--color-primary);margin-bottom:var(--space-4)}
+    .credits{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+    footer{padding:var(--space-10) 0 var(--space-16);border-top:1px solid var(--color-divider);color:var(--color-text-muted)}
+    .footer-grid{display:grid;grid-template-columns:1fr auto;gap:var(--space-4);align-items:end}
+    @media (max-width: 980px){
+      .hero-grid,.two-col,.gallery,.credits,.footer-grid{grid-template-columns:1fr}
+      .grid-3,.stats{grid-template-columns:repeat(2,1fr)}
+      .timeline-item{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    @media (max-width: 640px){
+      .grid-3,.stats{grid-template-columns:1fr}
+      .topbar{align-items:flex-start}
+      h1{max-width:13ch}
+      .hero-card{min-height:auto}
+    }
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none !important}}
+  </style>
+</head>
+<body>
+  <a href="#contenuto" class="skip-link">Salta al contenuto</a>
+  <header>
+    <div class="container topbar">
+      <div class="brand" aria-label="Logo Spomenik di Barletta">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <path d="M10 52 22 16 30 52"/>
+          <path d="M24 52 36 10 44 52"/>
+          <path d="M38 52 50 20 54 52"/>
+          <path d="M8 54h48"/>
+        </svg>
+        <div class="brand-text">
+          <strong>Spomenik</strong>
+          <span>Barletta · memoria adriatica</span>
+        </div>
+      </div>
+      <nav aria-label="Sezioni principali">
+        <a href="#storia">Storia</a>
+        <a href="#architettura">Architettura</a>
+        <a href="#cronologia">Cronologia</a>
+        <a href="#memoria">Memoria</a>
+        <a href="#fonti-digitali">Fonti digitali</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Attiva tema scuro">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Ossario commemorativo dei caduti jugoslavi</div>
+          <h1>Lo Spomenik di Barletta tra scultura, paesaggio e memoria.</h1>
+          <p class="lead">Un sito divulgativo dedicato al monumento progettato da Dušan Džamonja nel cimitero di Barletta, nato come luogo di sepoltura e commemorazione dei caduti jugoslavi della Prima e della Seconda guerra mondiale.</p>
+        </div>
+        <article class="hero-card" aria-labelledby="scheda-monumento">
+          <div class="monument-mark" aria-hidden="true">
+            <svg viewBox="0 0 360 260" fill="none" stroke="currentColor" stroke-width="4">
+              <path d="M40 214 102 76 126 214"/>
+              <path d="M98 214 168 36 194 214"/>
+              <path d="M160 214 230 18 258 214"/>
+              <path d="M224 214 286 56 318 214"/>
+              <path d="M24 224h312"/>
+              <path d="M52 238h256" stroke-width="3" opacity=".4"/>
+            </svg>
+          </div>
+          <div>
+            <h2 id="scheda-monumento">Scheda rapida</h2>
+            <div class="meta-list" role="list">
+              <div class="meta-row" role="listitem"><span>Autore</span><span>Dušan Džamonja</span></div>
+              <div class="meta-row" role="listitem"><span>Luogo</span><span>Cimitero di Barletta</span></div>
+              <div class="meta-row" role="listitem"><span>Inaugurazione</span><span>1970</span></div>
+              <div class="meta-row" role="listitem"><span>Tipologia</span><span>Ossario e monumento commemorativo</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="container stats" aria-label="Dati principali del monumento">
+        <article class="stat"><strong>70 m</strong><span>Sviluppo longitudinale del sacrario.</span></article>
+        <article class="stat"><strong>20 m</strong><span>Ampiezza complessiva dell'impianto.</span></article>
+        <article class="stat"><strong>11 m</strong><span>Altezza massima della struttura.</span></article>
+        <article class="stat"><strong>2.000 m²</strong><span>Superficie complessiva dell'area monumentale.</span></article>
+      </div>
+    </section>
+
+    <section id="storia">
+      <div class="container two-col">
+        <div>
+          <span class="pill">Contesto storico</span>
+          <h2>Un memoriale nato nel quadro dei rapporti italo-jugoslavi.</h2>
+          <p>L'ossario di Barletta appartiene alla stagione dei monumenti ai combattenti della guerra di liberazione jugoslava realizzati dopo gli accordi diplomatici degli anni Sessanta tra Italia e Jugoslavia. In questo contesto il sito barlettano si afferma come il più grande e il più antico tra i quattro monumenti italiani dedicati alla guerra popolare di liberazione jugoslava.</p>
+          <p style="margin-top:1rem;">La collocazione nel cimitero urbano unisce dimensione funeraria e rappresentazione plastica. Il monumento custodisce le spoglie di 825 militari e partigiani jugoslavi, mentre sulle lastre bronzee sono ricordati altri 463 caduti i cui resti non furono rinvenuti.</p>
+        </div>
+        <aside class="sidebar-note" aria-label="Nota storica">
+          <h3>Perché Barletta</h3>
+          <p>La scelta della città si lega sia alla presenza di un grande cimitero in grado di accogliere l'ossario sia al valore simbolico del Mezzogiorno come teatro delle ultime campagne di guerra in Italia meridionale.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="architettura">
+      <div class="container">
+        <span class="pill">Architettura e forma</span>
+        <div class="two-col">
+          <div>
+            <h2>Una composizione brutalista che trasforma il sepolcro in paesaggio scultoreo.</h2>
+            <p>La struttura è articolata su due livelli e combina percorsi, recinto funerario e slancio verticale. Le steli emergenti in cemento armato e l'impianto a raggiera traducono la memoria in una forma astratta, lontana dal figurativismo celebrativo tradizionale.</p>
+            <div class="diagram" aria-label="Schema astratto del monumento">
+              <svg viewBox="0 0 900 360" fill="none" stroke="currentColor" stroke-width="6">
+                <path d="M60 300H840" opacity=".25"/>
+                <path d="M150 280 230 120 260 280"/>
+                <path d="M260 280 350 56 382 280"/>
+                <path d="M385 280 475 28 510 280"/>
+                <path d="M510 280 590 84 626 280"/>
+                <path d="M630 280 710 150 740 280"/>
+                <path d="M90 314c86-32 191-52 360-52s272 18 360 52" stroke-width="4" opacity=".45"/>
+              </svg>
+            </div>
+          </div>
+          <blockquote class="quote">Le sette steli e i corpi più bassi evocano una tensione simultaneamente funeraria e ascensionale, facendo dello spazio memoriale un luogo di attraversamento e non un semplice fondale celebrativo.</blockquote>
+        </div>
+        <div class="grid-3" style="margin-top:2rem;">
+          <article class="card">
+            <h3>Materia</h3>
+            <p>Cemento armato a vista, superfici sobrie e massa plastica compatta costruiscono un linguaggio coerente con la poetica di Džamonja.</p>
+          </article>
+          <article class="card">
+            <h3>Sequenza</h3>
+            <p>Il visitatore percepisce prima il profilo emergente, poi la discesa verso l'ossario, con un'esperienza spaziale fatta di avvicinamento e immersione.</p>
+          </article>
+          <article class="card">
+            <h3>Simbolo</h3>
+            <p>Le forme possono richiamare vele, germinazioni o fiamme: immagini aperte che ampliano la lettura pubblica del memoriale.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cronologia">
+      <div class="container">
+        <span class="pill">Cronologia</span>
+        <h2>Quattro passaggi essenziali per leggere il monumento.</h2>
+        <div class="timeline" style="margin-top:2rem;">
+          <article class="timeline-item">
+            <div class="timeline-year">Anni 1960</div>
+            <div><h3>Accordi e progetto</h3><p>Nel clima della cooperazione diplomatica tra Italia e Jugoslavia prende forma il programma dei monumenti dedicati ai combattenti jugoslavi caduti sul territorio italiano.</p></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-year">1969</div>
+            <div><h3>Avvio del cantiere</h3><p>La costruzione dell'ossario a Barletta viene avviata alla fine del decennio, trasformando l'area nord-occidentale del cimitero in un grande complesso memoriale.</p></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-year">1970</div>
+            <div><h3>Inaugurazione</h3><p>Il sacrario viene inaugurato nel 1970 come luogo di sepoltura e commemorazione dei caduti jugoslavi della Prima e della Seconda guerra mondiale.</p></div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-year">Oggi</div>
+            <div><h3>Riscoperta critica</h3><p>Ricerche, conferenze e attività associative stanno riportando attenzione sul valore architettonico e memoriale dello Spomenik di Barletta nel quadro della memoria adriatica condivisa.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="memoria">
+      <div class="container">
+        <span class="pill">Memoria pubblica</span>
+        <div class="gallery">
+          <article class="gallery-card tall">
+            <h2>Un luogo da leggere con più chiavi.</h2>
+            <p>Lo Spomenik di Barletta è allo stesso tempo sacrario, opera d'arte ambientale e documento politico. Per questo può essere valorizzato con strumenti diversi: visite guidate, apparati interpretativi, mappe digitali, percorsi didattici e connessioni con altri siti della memoria in Italia e nell'ex Jugoslavia.</p>
+          </article>
+          <div class="gallery-stack">
+            <article class="gallery-card small"><h3>Didattica</h3><p>Il monumento offre un caso esemplare per parlare di Resistenza, relazioni adriatiche e linguaggi dell'astrazione memoriale.</p></article>
+            <article class="gallery-card small"><h3>Tutela</h3><p>La conoscenza storica e costruttiva del sito è la base per ogni futura strategia di conservazione e valorizzazione.</p></article>
+          </div>
+        </div>
+        <div class="credits" style="margin-top:2rem;">
+          <article class="card">
+            <h3>Fonti usate per i contenuti</h3>
+            <p>Wikipedia, Memo ANPI e il contributo scientifico pubblicato su FUPress convergono nel descrivere lo Spomenik di Barletta come un ossario monumentale progettato da Dušan Džamonja e inaugurato nel 1970.</p>
+          </article>
+          <article class="card">
+            <h3>Possibili estensioni</h3>
+            <p>Il sito ora può essere collegato ai materiali di ricerca e divulgazione già curati da Rosanna Rizzi sui canali social e accademici dedicati al monumento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fonti-digitali">
+      <div class="container">
+        <span class="pill">Archivio digitale</span>
+        <h2>Canali da cui proseguire la lettura e la documentazione.</h2>
+        <div class="grid-3" style="margin-top:2rem;">
+          <article class="card">
+            <h3>Facebook</h3>
+            <p>La pagina <a href="https://www.facebook.com/spomenkosturnica" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);text-decoration:underline;">Spomen Kosturnica Barletta</a> raccoglie aggiornamenti, fotografie e testi divulgativi dedicati al monumento. Le immagini e i testi provenienti da questo canale devono essere citati indicando sempre la fonte della pagina Facebook.</p>
+          </article>
+          <article class="card">
+            <h3>Academia.edu</h3>
+            <p>Nel profilo <a href="https://poliba.academia.edu/RosannaRizzi" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);text-decoration:underline;">Rosanna Rizzi su Academia.edu</a> sono disponibili testi, brochure e materiali di ricerca relativi allo Spomen Kosturnica, compresa la brochure dell'ossario commemorativo realizzato tra il 1968 e il 1970 su progetto di Dušan Džamonja e Hildegard Auf-Franić.</p>
+          </article>
+          <article class="card">
+            <h3>Flickr</h3>
+            <p>La galleria <a href="https://www.flickr.com/photos/spomenkosturnica/" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);text-decoration:underline;">Spomen Kosturnica su Flickr</a> può ospitare una futura selezione fotografica integrata nel sito, con attribuzione esplicita alla raccolta pubblicata online.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="container two-col">
+        <div>
+          <span class="pill">Contatti</span>
+          <h2>Per informazioni, collaborazioni e materiali.</h2>
+          <p>Il progetto può essere accompagnato da richieste di approfondimento, collaborazioni scientifiche, attività didattiche e segnalazioni documentarie collegate allo Spomenik di Barletta.</p>
+        </div>
+        <article class="card">
+          <h3>Email dedicata</h3>
+          <p><a href="mailto:spomenkosturnica.barletta@gmail.com" style="color:var(--color-primary);text-decoration:underline;">spomenkosturnica.barletta@gmail.com</a></p>
+          <p style="margin-top:1rem;">Per contatti editoriali e aggiornamenti social, il sito rimanda anche alla pagina Facebook e al profilo Academia collegati al progetto.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <p>Progetto web informativo dedicato allo Spomenik di Barletta, pensato per divulgazione culturale, didattica e valorizzazione del patrimonio memoriale.</p>
+      <p aria-label="Attribuzione">Design editoriale responsive · Tema chiaro/scuro</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const toggle=document.querySelector('[data-theme-toggle]');
+      const root=document.documentElement;
+      let theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      root.setAttribute('data-theme',theme);
+      const renderIcon=()=>{toggle.innerHTML=theme==='dark'
+        ?'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        :'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        toggle.setAttribute('aria-label', theme==='dark' ? 'Attiva tema chiaro' : 'Attiva tema scuro');
+      };
+      renderIcon();
+      toggle.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);renderIcon();});
+    })();
+  </script>
+</body>
+</html>
